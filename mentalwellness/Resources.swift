@@ -21,3 +21,4 @@ struct Resources: View {
 #Preview {
     Resources()
 }
+
