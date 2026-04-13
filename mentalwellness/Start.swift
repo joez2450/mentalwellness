@@ -18,8 +18,11 @@ struct Start: View {
                 NavigationLink("Play Card Match", destination: GameSceneThree())
                     .buttonStyle(.borderedProminent)
                 
+                NavigationLink("Play Button Masher ", destination: GameSceneTwo())
+                    .buttonStyle(.borderedProminent)
+                
             }
-            .padding()
+            .padding(50)
         }
     }
 }

@@ -32,7 +32,7 @@ struct GameSceneThree: View {
     var body: some View {
         GeometryReader{geo in
             VStack{
-                Text("Reaction Time Game")
+                Text("Memory Match")
                     .font(.title)
                     .bold()
                     .padding(.top)
@@ -41,7 +41,7 @@ struct GameSceneThree: View {
                     LazyVGrid(columns: firstColumnGrid, spacing: 10){
                         ForEach(cards){card in
                             CardView(card: card,
-                                     width:Int(geo.size.width/4 - 10),
+                                     width:Int(geo.size.height/6),
                                      MatchedCards: $MatchedCards,
                                      UserChoices: $UserChoices)}
                     }
@@ -50,8 +50,8 @@ struct GameSceneThree: View {
                         gameStart = false
                     }
                     .frame(maxWidth: .infinity, alignment: .center)
-                    .padding()
-                    .font(.system(size: 50))
+                    .padding(.bottom)
+                    .font(.system(size: 20))
                     
                 } else {
                     Button("Start Game"){
@@ -59,7 +59,7 @@ struct GameSceneThree: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .center)
                     .padding()
-                    .font(.system(size: 50))
+                    .font(.system(size: 20))
                 }
                 NavigationStack{
                     NavigationLink("Return to Main Menu", destination: ContentView())
@@ -81,5 +81,4 @@ struct GameSceneThree: View {
 //
 //  Created by Joe Zheng on 4/9/26.
 //
-
 

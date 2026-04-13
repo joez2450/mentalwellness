@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack{
-                Color.blue
+                Color.yellow
                     .ignoresSafeArea()
                 VStack(spacing: 30) {
                     Text("Mental Wellness")
